@@ -1,108 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aurelion | Timeless Engineering</title>
-    <meta name="description" content="Luxury Swiss timepieces tailored for the modern era." />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              primary: "#f2b90d",
-              "background-light": "#f8f8f5",
-              "background-dark": "#0E0E0F",
-              "design-dark": "#181611",
-              void: "#0E0E0F",
-              "metal-light": "#e0e0e0",
-              "metal-dark": "#393528",
-              "off-white": "#F5F5F3",
-              "platinum": "#E5E4E2",
-              "charcoal": "#221e10",
-              "surface-dark": "#221e10",
-            },
-            fontFamily: {
-              display: ["Manrope", "sans-serif"],
-              serif: ["Playfair Display", "serif"],
-              "serif-craft": ["Cormorant Garamond", "serif"],
-            },
-            backgroundImage: {
-              'void-gradient': 'radial-gradient(circle at center, #232326 0%, #0E0E0F 60%)',
-              'radial-glow': 'radial-gradient(circle at center, rgba(242, 185, 13, 0.08) 0%, rgba(24, 22, 17, 0) 70%)',
-              'metallic-text': 'linear-gradient(to bottom right, #ffffff 20%, #bab29c 50%, #888274 80%)',
-              'metallic-gradient': 'linear-gradient(90deg, transparent 0%, rgba(242, 185, 13, 0.3) 50%, transparent 100%)',
-            },
-            letterSpacing: {
-              'widest-xl': '0.3em',
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-        body {
-            font-family: "Manrope", sans-serif;
-            background-color: #0E0E0F;
-            color: #F5F5F3;
-            overflow-x: hidden;
-        }
-        .bg-noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 50;
-            opacity: 0.04;
-            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsrtrsIHhnis1J-2PPjE4e0OoTc_gIVdcjYCxPzYDWhDLWfzIAnA7XlgWJbUAf2HSprlXM6qLIkAWsfQyxw5A4qdkVJQa5D7NT8QVjNGcy2WcYSxBqvaISwPOg5RH7-o2mfoi2_PfUBFuKqM-8LFs2SquZD6NeR5FSI_GH9zYBy7uaFHXcGs2tDSlv5CIRxEQ2B8X_wa18e2pRERSDnZN9KvVFo0Qn8opWmFhxYAabHKgHaP3My0_Lxe96kkI1Gwnw8mlzy2MbGjP9');
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0E0E0F;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #444;
-        }
-        .text-glow {
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-        }
-        .text-gradient-platinum {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to bottom right, #ffffff, #d1d5db, #6b7280);
-        }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "framer-motion": "https://esm.sh/framer-motion@^12.33.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
-  }
-}
-</script>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurelion | Timeless Engineering</title>
+  <meta name="description" content="Luxury Swiss timepieces tailored for the modern era." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>

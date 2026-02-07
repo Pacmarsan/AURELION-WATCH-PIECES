@@ -22,7 +22,7 @@ const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-void text-white selection:bg-primary/30 selection:text-white">
       {/* Global Noise Overlay */}
-      <div className="bg-noise fixed inset-0 z-[60] pointer-events-none"></div>
+      <div className="bg-noise fixed inset-0 z-40 pointer-events-none"></div>
       
       <Navbar onNavigate={setView} />
       

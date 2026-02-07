@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Manrope", sans-serif;
+    @apply bg-void text-off-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.04;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsrtrsIHhnis1J-2PPjE4e0OoTc_gIVdcjYCxPzYDWhDLWfzIAnA7XlgWJbUAf2HSprlXM6qLIkAWsfQyxw5A4qdkVJQa5D7NT8QVjNGcy2WcYSxBqvaISwPOg5RH7-o2mfoi2_PfUBFuKqM-8LFs2SquZD6NeR5FSI_GH9zYBy7uaFHXcGs2tDSlv5CIRxEQ2B8X_wa18e2pRERSDnZN9KvVFo0Qn8opWmFhxYAabHKgHaP3My0_Lxe96kkI1Gwnw8mlzy2MbGjP9');
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+
+  .text-gradient-platinum {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to bottom right, #ffffff, #d1d5db, #6b7280);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0E0E0F;
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
