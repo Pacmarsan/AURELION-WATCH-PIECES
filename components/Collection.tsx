@@ -14,8 +14,8 @@ const containerVariants = {
 
 const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-        opacity: 1, 
+    visible: {
+        opacity: 1,
         y: 0,
         transition: {
             duration: 0.8,
@@ -38,8 +38,8 @@ export const Collection: React.FC = () => {
                         <span className="text-primary text-xs tracking-widest uppercase block mb-3 font-medium">The Collection</span>
                         <h3 className="font-serif text-3xl md:text-5xl text-white leading-tight">Timeless Engineering</h3>
                     </motion.div>
-                    
-                    <motion.a 
+
+                    <motion.a
                         href="#"
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -51,7 +51,7 @@ export const Collection: React.FC = () => {
                     </motion.a>
                 </div>
 
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -59,20 +59,20 @@ export const Collection: React.FC = () => {
                     className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
                 >
                     {PRODUCTS.map((product, index) => (
-                        <motion.div 
+                        <motion.div
                             key={product.id}
                             variants={itemVariants}
-                            className={`group cursor-pointer ${index === 1 ? 'md:mt-12' : ''}`}
+                            className={`group cursor-pointer`}
                         >
                             <div className="bg-[#1a1a1c] aspect-[4/5] relative overflow-hidden rounded-sm mb-6 shadow-2xl">
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 opacity-60 z-10 duration-500 group-hover:opacity-40"></div>
-                                
-                                <img 
-                                    src={product.image} 
-                                    alt={product.alt} 
+
+                                <img
+                                    src={product.image}
+                                    alt={product.alt}
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 ease-out"
                                 />
-                                
+
                                 <div className="absolute bottom-6 left-6 z-20 transform transition-transform duration-500 group-hover:translate-y-[-5px]">
                                     <span className="text-white font-serif text-xl md:text-2xl italic block mb-2">{product.name}</span>
                                     <p className="text-gray-400 text-xs tracking-wide">{product.price}</p>
