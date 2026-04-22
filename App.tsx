@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Collection } from './components/Collection';
+import { ThreeDLandingPage } from './components/ThreeDLandingPage';
 import { Footer } from './components/Footer';
 import { VerticalGallery } from './components/VerticalGallery';
-import { ProductDetail } from './components/ProductDetail';
 import { Craft } from './components/Craft';
 import { Contact } from './components/Contact';
 
@@ -28,10 +26,7 @@ const App: React.FC = () => {
       
       <main>
         {view === 'home' && (
-          <>
-            <Hero onNavigate={setView} />
-            <Collection />
-          </>
+          <ThreeDLandingPage onNavigate={setView} />
         )}
         {view === 'craft' && (
           <Craft />
@@ -42,7 +37,6 @@ const App: React.FC = () => {
       </main>
       
       {/* Footer logic: Home and Craft show normal footer. Contact has its own layout. */}
-      {view === 'home' && <Footer />}
       {view === 'craft' && <Footer />}
     </div>
   );
