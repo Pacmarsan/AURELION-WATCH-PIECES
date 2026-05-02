@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
-import { ThreeDLandingPage } from './components/ThreeDLandingPage';
+import { ImageSequenceLandingPage } from './components/ImageSequenceLandingPage';
 import { Footer } from './components/Footer';
 import { VerticalGallery } from './components/VerticalGallery';
 import { Craft } from './components/Craft';
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       
       <main>
         {view === 'home' && (
-          <ThreeDLandingPage onNavigate={setView} />
+          <ImageSequenceLandingPage onNavigate={setView} />
         )}
         {view === 'craft' && (
           <Craft />

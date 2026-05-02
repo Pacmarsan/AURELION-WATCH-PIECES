@@ -12,13 +12,15 @@ export const Contact: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col bg-background-dark min-h-screen font-display text-white selection:bg-primary/30 selection:text-white relative overflow-hidden">
+        <div className="flex flex-col bg-black min-h-screen font-display text-white selection:bg-primary/30 selection:text-white relative overflow-hidden">
+            {/* Global Blueprint Grid Overlay */}
+            <div className="fixed inset-0 pointer-events-none opacity-30 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] z-0"></div>
             
             <main className="flex-grow flex items-center justify-center px-6 pt-32 pb-20 relative z-10">
                 {/* Background Atmosphere */}
                 <div className="absolute inset-0 z-0 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4"></div>
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.02] blur-[100px] rounded-full translate-y-1/2 -translate-x-1/4"></div>
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-900/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4"></div>
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/[0.03] blur-[100px] rounded-full translate-y-1/2 -translate-x-1/4"></div>
                 </div>
 
                 <motion.div 
@@ -63,7 +65,7 @@ export const Contact: React.FC = () => {
                         >
                             <input 
                                 autoComplete="off" 
-                                className="peer w-full bg-transparent border-b border-white/10 text-white font-light py-4 placeholder-transparent focus:border-primary/60 focus:outline-none focus:ring-0 transition-colors duration-500" 
+                                className="peer w-full bg-transparent border-b border-blue-900/50 text-white font-light py-4 placeholder-transparent focus:border-blue-500/60 focus:outline-none focus:ring-0 transition-colors duration-500" 
                                 id="name" 
                                 name="name" 
                                 placeholder="Full Name" 
@@ -88,7 +90,7 @@ export const Contact: React.FC = () => {
                         >
                             <input 
                                 autoComplete="off" 
-                                className="peer w-full bg-transparent border-b border-white/10 text-white font-light py-4 placeholder-transparent focus:border-primary/60 focus:outline-none focus:ring-0 transition-colors duration-500" 
+                                className="peer w-full bg-transparent border-b border-blue-900/50 text-white font-light py-4 placeholder-transparent focus:border-blue-500/60 focus:outline-none focus:ring-0 transition-colors duration-500" 
                                 id="email" 
                                 name="email" 
                                 placeholder="Email Address" 
@@ -113,7 +115,7 @@ export const Contact: React.FC = () => {
                         >
                             <textarea 
                                 ref={textareaRef}
-                                className="peer w-full bg-transparent border-b border-white/10 text-white font-light py-4 placeholder-transparent focus:border-primary/60 focus:outline-none focus:ring-0 transition-colors duration-500 min-h-[50px] resize-none overflow-hidden" 
+                                className="peer w-full bg-transparent border-b border-blue-900/50 text-white font-light py-4 placeholder-transparent focus:border-blue-500/60 focus:outline-none focus:ring-0 transition-colors duration-500 min-h-[50px] resize-none overflow-hidden" 
                                 id="message" 
                                 name="message" 
                                 placeholder="Message" 

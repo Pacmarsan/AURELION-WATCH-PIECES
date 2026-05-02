@@ -15,7 +15,9 @@ import {
 
 export const Craft: React.FC = () => {
     return (
-        <div className="flex flex-col bg-background-dark min-h-screen font-display text-off-white selection:bg-primary/30 selection:text-white">
+        <div className="flex flex-col bg-black min-h-screen font-display text-off-white selection:bg-primary/30 selection:text-white relative">
+            {/* Global Blueprint Grid Overlay */}
+            <div className="fixed inset-0 pointer-events-none opacity-30 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] z-0"></div>
             {/* --- Section 1: Knurled Crown Hero --- */}
             <section className="flex-grow flex flex-col lg:flex-row w-full min-h-[calc(100vh-64px)] pt-16">
                 
@@ -26,16 +28,16 @@ export const Craft: React.FC = () => {
                     transition={{ duration: 1.2 }}
                     className="lg:w-[60%] relative h-[50vh] lg:h-auto overflow-hidden group"
                 >
-                    <div className="absolute inset-0 bg-background-dark z-0"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/5 blur-[120px] rounded-full z-0"></div>
+                    <div className="absolute inset-0 bg-black z-0"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-900/20 blur-[120px] rounded-full z-0"></div>
                     
                     <div className="absolute inset-0 z-10">
                         <div 
                             className="w-full h-full bg-cover bg-center transition-transform duration-[20s] ease-linear scale-110 group-hover:scale-100" 
                             style={{ backgroundImage: `url("${IMAGES.craft.hero}")` }}
                         ></div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background-dark/90 lg:to-background-dark"></div>
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background-dark lg:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/90 lg:to-black"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black lg:hidden"></div>
                     </div>
 
                     {/* Hotspot */}
@@ -51,7 +53,7 @@ export const Craft: React.FC = () => {
                         
                         {/* Tooltip */}
                         <div className="absolute left-14 top-1/2 -translate-y-1/2 w-48 opacity-0 group-hover/hotspot:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <div className="bg-[#221e10]/90 backdrop-blur border border-white/10 p-3 rounded text-left">
+                            <div className="bg-blue-950/90 backdrop-blur border border-blue-500/30 p-3 rounded text-left">
                                 <p className="text-primary text-[10px] uppercase tracking-widest font-bold mb-1">Ruby Bearing</p>
                                 <p className="text-gray-400 text-xs leading-relaxed">Synthetic corundum for frictionless rotation.</p>
                             </div>
@@ -60,7 +62,7 @@ export const Craft: React.FC = () => {
                 </motion.div>
 
                 {/* Right: Content */}
-                <div className="lg:w-[40%] flex flex-col justify-center px-8 py-16 lg:py-0 lg:pr-24 lg:pl-16 relative z-20 bg-background-dark">
+                <div className="lg:w-[40%] flex flex-col justify-center px-8 py-16 lg:py-0 lg:pr-24 lg:pl-16 relative z-20 bg-black">
                     <motion.div 
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -90,13 +92,13 @@ export const Craft: React.FC = () => {
                             <div className="h-px w-full bg-gradient-to-r from-white/20 via-primary/40 to-transparent"></div>
 
                             <div className="flex flex-col gap-6">
-                                <p className="text-[#bab29c] text-base lg:text-lg font-light leading-relaxed">
+                                <p className="text-blue-100/70 text-base lg:text-lg font-light leading-relaxed">
                                     Carved from a single block of 18k gold, the tactile feedback of the crown is tuned to a precise resistance, offering a connection between the wearer and the movement within. Every ridge is hand-polished to ensure a frictionless interaction, embodying the perfect balance of form and function.
                                 </p>
                             </div>
 
                             {/* Specs Grid */}
-                            <div className="grid grid-cols-2 gap-x-8 gap-y-8 mt-4 border-l border-white/5 pl-8">
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-8 mt-4 border-l border-blue-900/40 pl-8">
                                 {[
                                     { label: "Material", value: "18k Rose Gold" },
                                     { label: "Finish", value: "Hand-Polished Chamfers" },
@@ -122,7 +124,7 @@ export const Craft: React.FC = () => {
             </section>
 
             {/* --- Section 2: Craft Cards --- */}
-            <section className="w-full bg-[#221e10] py-32 px-6 lg:px-20 border-t border-white/5 relative z-10">
+            <section className="w-full bg-[#050a15] py-32 px-6 lg:px-20 border-t border-blue-900/40 relative z-10">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <CraftCard 
@@ -148,7 +150,7 @@ export const Craft: React.FC = () => {
             </section>
 
             {/* --- Section 3: Signature Hero --- */}
-            <section className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden w-full border-t border-white/5 bg-[#181611]">
+            <section className="relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden w-full border-t border-blue-900/40 bg-black">
                 <div className="absolute inset-0 bg-radial-glow pointer-events-none z-0"></div>
                 
                 {/* Background Text */}
@@ -157,7 +159,7 @@ export const Craft: React.FC = () => {
                     whileInView={{ opacity: 0.5, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-black tracking-[-0.05em] text-[#221e10] select-none z-0 whitespace-nowrap pointer-events-none"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-black tracking-[-0.05em] text-blue-950/30 select-none z-0 whitespace-nowrap pointer-events-none"
                 >
                     SIGNATURE
                 </motion.h1>
@@ -173,14 +175,14 @@ export const Craft: React.FC = () => {
                         className="flex flex-col gap-24 lg:gap-32 w-full lg:w-1/4 items-center lg:items-end text-center lg:text-right order-2 lg:order-1"
                     >
                         <div className="group flex flex-col gap-2 relative">
-                            <div className="hidden lg:block absolute -right-8 top-1/2 w-16 h-[1px] bg-[#544e3b] group-hover:bg-primary/50 transition-colors duration-500"></div>
+                            <div className="hidden lg:block absolute -right-8 top-1/2 w-16 h-[1px] bg-blue-900/50 group-hover:bg-primary/50 transition-colors duration-500"></div>
                             <h3 className="text-gradient-platinum text-xl lg:text-2xl font-light tracking-wide">CALIBER 9000</h3>
-                            <p className="text-[#888274] text-xs tracking-[0.1em] uppercase">Automatic Movement <br/> 28,800 vph</p>
+                            <p className="text-blue-200/60 text-xs tracking-[0.1em] uppercase">Automatic Movement <br/> 28,800 vph</p>
                         </div>
                         <div className="group flex flex-col gap-2 relative">
-                            <div className="hidden lg:block absolute -right-8 top-1/2 w-16 h-[1px] bg-[#544e3b] group-hover:bg-primary/50 transition-colors duration-500"></div>
+                            <div className="hidden lg:block absolute -right-8 top-1/2 w-16 h-[1px] bg-blue-900/50 group-hover:bg-primary/50 transition-colors duration-500"></div>
                             <h3 className="text-gradient-platinum text-xl lg:text-2xl font-light tracking-wide">SAPPHIRE</h3>
-                            <p className="text-[#888274] text-xs tracking-[0.1em] uppercase">Double-domed <br/> Anti-reflective</p>
+                            <p className="text-blue-200/60 text-xs tracking-[0.1em] uppercase">Double-domed <br/> Anti-reflective</p>
                         </div>
                     </motion.div>
 
@@ -209,14 +211,14 @@ export const Craft: React.FC = () => {
                         className="flex flex-col gap-24 lg:gap-32 w-full lg:w-1/4 items-center lg:items-start text-center lg:text-left order-3"
                     >
                         <div className="group flex flex-col gap-2 relative">
-                            <div className="hidden lg:block absolute -left-8 top-1/2 w-16 h-[1px] bg-[#544e3b] group-hover:bg-primary/50 transition-colors duration-500"></div>
+                            <div className="hidden lg:block absolute -left-8 top-1/2 w-16 h-[1px] bg-blue-900/50 group-hover:bg-primary/50 transition-colors duration-500"></div>
                             <h3 className="text-primary/90 text-xl lg:text-2xl font-light tracking-wide">72HR RESERVE</h3>
-                            <p className="text-[#888274] text-xs tracking-[0.1em] uppercase">Twin barrel <br/> mainspring system</p>
+                            <p className="text-blue-200/60 text-xs tracking-[0.1em] uppercase">Twin barrel <br/> mainspring system</p>
                         </div>
                         <div className="group flex flex-col gap-2 relative">
-                            <div className="hidden lg:block absolute -left-8 top-1/2 w-16 h-[1px] bg-[#544e3b] group-hover:bg-primary/50 transition-colors duration-500"></div>
+                            <div className="hidden lg:block absolute -left-8 top-1/2 w-16 h-[1px] bg-blue-900/50 group-hover:bg-primary/50 transition-colors duration-500"></div>
                             <h3 className="text-gradient-platinum text-xl lg:text-2xl font-light tracking-wide">TITANIUM</h3>
-                            <p className="text-[#888274] text-xs tracking-[0.1em] uppercase">Grade 5 Brushed <br/> Casing Finish</p>
+                            <p className="text-blue-200/60 text-xs tracking-[0.1em] uppercase">Grade 5 Brushed <br/> Casing Finish</p>
                         </div>
                     </motion.div>
 
@@ -229,7 +231,7 @@ export const Craft: React.FC = () => {
                     transition={{ delay: 0.5, duration: 0.8 }}
                     className="relative z-20 mt-8 mb-16 flex flex-col items-center gap-6"
                 >
-                    <p className="text-[#bab29c] text-sm font-light italic tracking-widest max-w-md text-center px-4">
+                    <p className="text-blue-200/80 text-sm font-light italic tracking-widest max-w-md text-center px-4">
                         "Time is not measured by clocks, but by moments."
                     </p>
                     <button className="group relative flex items-center gap-3 overflow-hidden rounded-sm bg-primary px-8 py-3 text-background-dark transition-all duration-300 hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
@@ -239,14 +241,14 @@ export const Craft: React.FC = () => {
                 </motion.div>
                 
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-                    <span className="text-[10px] tracking-[0.2em] text-[#544e3b]">EXPLORE</span>
-                    <ChevronDown className="w-4 h-4 text-[#544e3b]" />
+                    <span className="text-[10px] tracking-[0.2em] text-blue-400/50">EXPLORE</span>
+                    <ChevronDown className="w-4 h-4 text-blue-400/50" />
                 </div>
             </section>
 
             {/* --- Section 4: Precision Engineering --- */}
-            <section className="bg-[#13110d] py-24 border-t border-[#2a261a]">
-                <div className="container mx-auto px-6 lg:px-12">
+            <section className="bg-[#02050a] py-24 border-t border-blue-900/40 relative z-10">
+                <div className="container mx-auto px-6 lg:px-12 relative z-10">
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -256,7 +258,7 @@ export const Craft: React.FC = () => {
                     >
                         <div className="max-w-2xl">
                             <h2 className="text-3xl md:text-4xl font-light text-white mb-4 tracking-tight">PRECISION <span className="text-primary font-serif italic">Engineering</span></h2>
-                            <p className="text-[#888274] text-lg font-light leading-relaxed">
+                            <p className="text-blue-100/70 text-lg font-light leading-relaxed">
                                 Every component of the Aurelion Signature is finished by hand. From the chamfered bridges to the polished screw heads, no detail is too small for perfection.
                             </p>
                         </div>
@@ -265,7 +267,7 @@ export const Craft: React.FC = () => {
                         </a>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 px-1 border-t border-[#2a261a]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1 px-1 border-t border-blue-900/40">
                         
                         {/* Card 1 */}
                         <motion.div 
@@ -273,7 +275,7 @@ export const Craft: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.1 }}
-                            className="group relative p-8 border-l border-b md:border-b-0 border-[#2a261a] hover:bg-[#1a1814] transition-colors duration-500"
+                            className="group relative p-8 border-l border-b md:border-b-0 border-blue-900/40 hover:bg-blue-950/20 transition-colors duration-500"
                         >
                             <div 
                                 className="mb-6 h-48 w-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" 
@@ -283,7 +285,7 @@ export const Craft: React.FC = () => {
                                 <Settings className="w-5 h-5 text-primary" strokeWidth={1.5} />
                                 <h4 className="text-white text-lg font-medium tracking-wide">The Movement</h4>
                             </div>
-                            <p className="text-[#888274] text-sm leading-relaxed">In-house Caliber 9000 with exposed tourbillon, visible through the sapphire caseback.</p>
+                            <p className="text-blue-200/60 text-sm leading-relaxed">In-house Caliber 9000 with exposed tourbillon, visible through the sapphire caseback.</p>
                         </motion.div>
 
                         {/* Card 2 */}
@@ -292,7 +294,7 @@ export const Craft: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="group relative p-8 border-l border-b md:border-b-0 border-[#2a261a] hover:bg-[#1a1814] transition-colors duration-500"
+                            className="group relative p-8 border-l border-b md:border-b-0 border-blue-900/40 hover:bg-blue-950/20 transition-colors duration-500"
                         >
                             <div 
                                 className="mb-6 h-48 w-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" 
@@ -302,7 +304,7 @@ export const Craft: React.FC = () => {
                                 <Diamond className="w-5 h-5 text-primary" strokeWidth={1.5} />
                                 <h4 className="text-white text-lg font-medium tracking-wide">The Material</h4>
                             </div>
-                            <p className="text-[#888274] text-sm leading-relaxed">Aerospace-grade titanium meeting sapphire crystal for unyielding durability.</p>
+                            <p className="text-blue-200/60 text-sm leading-relaxed">Aerospace-grade titanium meeting sapphire crystal for unyielding durability.</p>
                         </motion.div>
 
                         {/* Card 3 */}
@@ -311,7 +313,7 @@ export const Craft: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className="group relative p-8 border-l border-r border-[#2a261a] hover:bg-[#1a1814] transition-colors duration-500"
+                            className="group relative p-8 border-l border-r border-blue-900/40 hover:bg-blue-950/20 transition-colors duration-500"
                         >
                             <div 
                                 className="mb-6 h-48 w-full bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" 
@@ -321,7 +323,7 @@ export const Craft: React.FC = () => {
                                 <Brush className="w-5 h-5 text-primary" strokeWidth={1.5} />
                                 <h4 className="text-white text-lg font-medium tracking-wide">The Finish</h4>
                             </div>
-                            <p className="text-[#888274] text-sm leading-relaxed">Hand-brushed platinum accents on a slate dial, creating a play of light and shadow.</p>
+                            <p className="text-blue-200/60 text-sm leading-relaxed">Hand-brushed platinum accents on a slate dial, creating a play of light and shadow.</p>
                         </motion.div>
 
                     </div>
@@ -337,7 +339,7 @@ const CraftCard = ({ icon: Icon, title, text, delay }: { icon: any, title: strin
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay, duration: 0.6 }}
-        className="group p-10 border border-white/5 bg-background-dark hover:border-primary/20 transition-all duration-700 rounded-sm"
+        className="group p-10 border border-blue-900/30 bg-black hover:border-blue-500/50 backdrop-blur-md transition-all duration-700 rounded-sm"
     >
         <div className="text-primary mb-8 opacity-60 group-hover:opacity-100 transition-opacity">
             <Icon className="w-10 h-10 stroke-[1.5]" />

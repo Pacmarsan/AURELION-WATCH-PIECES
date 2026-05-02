@@ -20,10 +20,13 @@ interface VerticalGalleryProps {
 
 export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) => {
     return (
-        <div className="bg-background-dark text-white overflow-hidden font-display antialiased w-full h-screen relative">
+        <div className="bg-black text-white overflow-hidden font-display antialiased w-full h-screen relative">
+
+            {/* Global Blueprint Grid Overlay */}
+            <div className="fixed inset-0 pointer-events-none opacity-30 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] z-0"></div>
 
             {/* Gallery Header */}
-            <header className="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/10">
+            <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
                 <div className="px-6 md:px-12 py-6">
                     <div className="relative flex items-center justify-between">
                         <nav className="hidden md:flex items-center gap-10">
@@ -80,7 +83,7 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
 
                 {/* Section 1: Pilot */}
                 <section className="snap-section h-screen w-full relative flex items-center justify-center overflow-hidden group snap-start">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#181611] via-background-dark to-black z-0"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#02050a] via-black to-[#000a1a] z-0"></div>
                     <div className="absolute top-0 right-0 w-[60vw] h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
                     <div className="container mx-auto px-6 md:px-12 h-full flex flex-col lg:flex-row items-center relative z-10 pt-24 pb-10">
@@ -123,7 +126,7 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
                                 className="relative w-full h-full flex items-center justify-center"
                             >
                                 <div
-                                    className="w-[320px] lg:w-[500px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl"
+                                    className="w-[240px] lg:w-[350px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl"
                                     style={{ backgroundImage: `url('${IMAGES.gallery.pilot}')` }}
                                 ></div>
                             </motion.div>
@@ -140,7 +143,7 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
 
                 {/* Section 2: Diver */}
                 <section className="snap-section h-screen w-full relative flex items-center justify-center overflow-hidden group border-t border-white/5 snap-start">
-                    <div className="absolute inset-0 bg-gradient-to-bl from-black via-surface-dark to-[#050505] z-0"></div>
+                    <div className="absolute inset-0 bg-gradient-to-bl from-black via-[#050a15] to-black z-0"></div>
 
                     <div className="container mx-auto px-6 md:px-12 h-full flex flex-col lg:flex-row-reverse items-center relative z-10 pt-24 pb-10">
                         {/* Text Content */}
@@ -184,7 +187,7 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
                                 className="relative w-full h-full flex items-center justify-center"
                             >
                                 <div
-                                    className="w-[320px] lg:w-[500px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-1000"
+                                    className="w-[240px] lg:w-[350px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-1000"
                                     style={{ backgroundImage: `url('${IMAGES.gallery.diver}')` }}
                                 ></div>
                             </motion.div>
@@ -201,8 +204,8 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
 
                 {/* Section 3: Gold */}
                 <section className="snap-section h-screen w-full relative flex items-center justify-center overflow-hidden group border-t border-white/5 snap-start">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#181611] via-background-dark to-black z-0"></div>
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[40vh] bg-gradient-to-t from-primary/10 to-transparent opacity-50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#000a1a] via-black to-black z-0"></div>
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[40vh] bg-gradient-to-t from-blue-900/10 to-transparent opacity-50"></div>
 
                     <div className="container mx-auto px-6 md:px-12 h-full flex flex-col lg:flex-row items-center relative z-10 pt-24 pb-10">
                         {/* Text Content */}
@@ -234,11 +237,11 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
                         {/* Image Content */}
                         <div className="w-full lg:w-7/12 h-[50vh] lg:h-full flex items-center justify-center relative order-1 lg:order-2">
                             <div className="relative w-full h-full flex items-center justify-center">
-                                <div className="absolute w-[350px] h-[350px] lg:w-[550px] lg:h-[550px] border border-primary/20 rounded-full animate-[spin_20s_linear_infinite] group-hover:border-primary/40 transition-colors duration-500"></div>
-                                <div className="absolute w-[400px] h-[400px] lg:w-[650px] lg:h-[650px] border border-white/5 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+                                <div className="absolute w-[280px] h-[280px] lg:w-[450px] lg:h-[450px] border border-primary/20 rounded-full animate-[spin_20s_linear_infinite] group-hover:border-primary/40 transition-colors duration-500"></div>
+                                <div className="absolute w-[320px] h-[320px] lg:w-[550px] lg:h-[550px] border border-white/5 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
 
                                 <div
-                                    className="w-[320px] lg:w-[500px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10 hover:scale-105 transition-transform duration-700"
+                                    className="w-[240px] lg:w-[350px] aspect-[3/4] bg-contain bg-center bg-no-repeat drop-shadow-2xl z-10 hover:scale-105 transition-transform duration-700"
                                     style={{ backgroundImage: `url('${IMAGES.gallery.goldMasterpiece}')` }}
                                 ></div>
 
@@ -257,8 +260,8 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
                 </section>
 
                 {/* Section 4: Contact */}
-                <section className="snap-section h-screen w-full relative flex items-center justify-center bg-[#181611] border-t border-white/5 snap-start">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 to-transparent"></div>
+                <section className="snap-section h-screen w-full relative flex items-center justify-center bg-black border-t border-white/5 snap-start">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 to-transparent"></div>
                     <div className="text-center relative z-10 flex flex-col items-center gap-8 px-4">
                         <Diamond className="w-12 h-12 text-primary mb-4" strokeWidth={1} />
                         <h2 className="font-serif text-4xl md:text-6xl text-white mb-2">Your Private Appointment</h2>
@@ -287,7 +290,7 @@ export const VerticalGallery: React.FC<VerticalGalleryProps> = ({ onNavigate }) 
 
 const SpecItem = ({ icon: Icon, label, value, align = "right", delay }: { icon: any, label: string, value: string, align?: "left" | "right", delay: string }) => (
     <div
-        className={`flex flex-col ${align === "left" ? "items-start" : "lg:items-end"} text-center ${align === "left" ? "text-left" : "lg:text-right"} gap-1 backdrop-blur-sm bg-black/20 p-3 rounded-lg border border-white/5`}
+        className={`flex flex-col ${align === "left" ? "items-start" : "lg:items-end"} text-center ${align === "left" ? "text-left" : "lg:text-right"} gap-1 backdrop-blur-md bg-blue-900/10 p-3 rounded-lg border border-blue-500/30`}
         style={{ transitionDelay: delay }}
     >
         <Icon className="w-5 h-5 text-primary/80 mb-1" strokeWidth={1.5} />

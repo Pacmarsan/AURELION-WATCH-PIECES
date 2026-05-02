@@ -36,8 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-void/90 backdrop-blur-md py-2 border-b border-white/5' : 'bg-transparent py-4 border-b border-white/5'
-                }`}
+            className="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent py-4 border-b border-white/5"
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between relative">
 
@@ -72,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 </div>
 
                 {/* Desktop Right Links */}
-                <div className="hidden lg:flex flex-1 justify-end gap-12 items-center">
+                <div className="hidden lg:flex flex-1 justify-end gap-8 items-center">
                     {NAV_LINKS.slice(2).map((link) => (
                         <button
                             key={link.name}
@@ -82,15 +81,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                             {link.name}
                         </button>
                     ))}
+                    <button 
+                        onClick={() => onNavigate('contact')}
+                        className="px-5 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 text-[10px] uppercase tracking-widest-xl text-white transition-all duration-300 backdrop-blur-sm"
+                    >
+                        Request Invite
+                    </button>
                 </div>
 
                 {/* Mobile Icons */}
-                <div className="lg:hidden flex flex-1 justify-end gap-5">
+                <div className="lg:hidden flex flex-1 justify-end gap-4 items-center">
                     <button className="text-off-white/60 hover:text-white transition-colors">
                         <Search className="w-5 h-5" strokeWidth={1} />
                     </button>
-                    <button className="text-off-white/60 hover:text-white transition-colors">
-                        <ShoppingBag className="w-5 h-5" strokeWidth={1} />
+                    <button 
+                        onClick={() => onNavigate('contact')}
+                        className="px-3 py-1.5 bg-white/5 border border-white/10 text-[9px] uppercase tracking-widest text-white backdrop-blur-sm"
+                    >
+                        Invite
                     </button>
                 </div>
             </div>
